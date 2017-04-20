@@ -16,12 +16,23 @@ module.exports = {
         test: /\.js|\.jsx$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: 'babel-loader',
+          loader: 'babel-loader'
         }
+      }, {
+        test: /\.svg$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'svg-inline-loader'
+        }
+      }, {
+        test: /\.scss$/,
+        exclude: /(node_modules|bower_components)/,
+        use: ['style-loader','css-loader?minimize&importLoaders=2', 'sass-loader']
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin()],
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     compress: true,
