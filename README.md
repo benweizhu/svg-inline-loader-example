@@ -1,2 +1,2 @@
-# webpack-svgstore-plugin-example
-webpack-svgstore-plugin-example
+# svg-inline-loader-example
+svg-inline-loader-example
