@@ -6,6 +6,7 @@
   "author": "benweizhu <benweizhu@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "build": "webpack -p",
     "server": "webpack-dev-server --open"
   },
   "devDependencies": {
